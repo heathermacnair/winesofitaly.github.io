@@ -1,0 +1,158 @@
+
+/*This document is the style sheet specific to each Italian region within the 'Regions' page on the Wines of Italy Website*/
+/*
+*CSS TABLE OF CONTENTS
+*
+* 1.0 - Flexbox Format
+* 2.0 - Regional Information Format
+* 3.0 - Regional Wines Format
+*/
+
+
+/*|| 1.0 - Flexbox Format */
+.regional-container{
+  display:flex;
+  justify-content:space-between;
+}
+
+.regional-content{
+  justify-content:space-between;
+}
+
+.popular-vineyards{
+  margin-left:38px;
+}
+
+.wines-group{
+  margin-left:38px;
+}
+
+/* create nested flexbox for white wines and red wines to be aligned next to eachother within their existing flexbox*/
+section>.regionalwines{
+  display:flex;
+  flex-direction:row
+}
+
+section:nth-of-type(2){
+  display:flex;
+  justify-content:flex-start;
+  margin-top:-10px;
+  margin-left:38px;
+}
+
+section:nth-of-type(2) div:first-child{
+  margin-right:60px;
+}
+
+/* change flex direction from row to column for tablet and mobile - unique breakpoint at 1120px for visual formatting purposes*/
+@media(max-width:1120px){
+  .regional-container{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-content:center;
+  }
+
+/*remove map of italy*/
+  .italy-map{
+    display:none;
+  }
+
+  .regional-content{
+    justify-content:space-between;
+  }
+}
+
+/*change flex direction of red & white wines to stack on top of eachother for smaller screen sizes- unique breakpoint at 1120px for visual formatting purposes*/
+@media(max-width:600px){
+  section:nth-of-type(2){
+    display:flex;
+    flex-direction: column;
+    margin-top:0;
+    margin-left:0;
+  }
+
+  section:nth-of-type(2) div:first-child{
+    margin-right:0;
+  }
+
+  .popular-vineyards{
+    margin:0;
+  }
+}
+
+/*|| 2.0 - Regional Information Format */
+.region-information{
+background-color:#1C2E4A;
+padding:0.5em 2em 1em 2em;
+border-radius: 4px;
+}
+
+/*style location icon*/
+.location{
+  max-width:100%;
+  height:auto;
+  padding-right:0.3em;
+}
+
+.rname, .region-information>p {
+  color:#fafafa;
+}
+
+/* adjust alignment and size for tablet screens*/
+@media(max-width:1024px){
+  .region-information{
+  margin:5em 0 0 1.5em;
+  position:relative;
+  }
+
+  .location{
+    max-width:50%;
+  }
+}
+
+/* alignment adjusted for mobile screens - unique breakpoint at 600px for visual formatting purposes*/
+@media(max-width:600px){
+  .region-information{
+   margin:3.5em 0 0 0;
+   padding:0.5em 1em;
+  }
+
+  .location{
+    max-width:20em;
+  }
+}
+
+
+/*|| 3.0 - Regional Wines and Popular Vineyards Format */
+
+.regional-wines{
+  padding-top:1.5em;
+}
+
+.rwines{
+  list-style-position:inside;
+  padding-left:0em;
+}
+
+.rwines>li{
+  text-align:left;
+  list-style-type:none;
+  line-height:3;
+}
+
+.rwines>li>a{
+  text-indent:20px:
+}
+
+.winetext{
+  margin-left:10px;
+}
+
+
+/* adjust formatting for mobile*/
+@media(max-width:375px){
+  .wines-group{
+    margin-top:1.8em;
+  }
+}

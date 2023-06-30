@@ -1,0 +1,150 @@
+/*This document is the style sheet specific to each blog post within the 'Blog' page on the Wines of Italy Website*/
+/*
+*CSS TABLE OF CONTENTS
+*
+* 1.0 -  Flexbox Format
+* 2.0 - Social Media Share Format
+* 3.0 - Title & Author Format
+* 4.0 -  Blog Content Format
+*/
+
+
+/*|| 1.0 - Flexbox Format */
+.blog-container{
+  display:flex;
+  justify-content:space-around;
+  align-items:flex-start;
+}
+
+.p-child{
+  margin-left:3em;
+}
+
+/*adjust formatting for smaller screens - unique breakpoint at 1500px for visual formatting purposes*/
+@media(max-width:1500px){
+  .blog-container{
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+  }
+
+  .img-child{
+    order:1;
+  }
+
+  .p-child{
+    text-align: left;
+    margin:1.5em 0 0 0;
+    flex-basis:100%;
+    order:2;
+  }
+
+  .blog-main{
+    padding:0 5%;
+  }
+
+  .pasta{
+    margin:0 auto;
+    padding:1em;
+  }
+}
+
+
+/*|| 2.0 - Social Media Share Format */
+.social{
+  text-align:right;
+  margin-right:4.5em;
+}
+
+.buttons{
+  border:none;
+  background-color:#fafafa;
+  padding:4px;
+  display: inline-block;
+  cursor:pointer;
+  max-width:100%;
+}
+
+/* underline button on hover */
+.buttons:hover{
+  border-bottom:solid #5e1224;
+}
+
+/* This tooltip was adapted from W3 Schools CSS tooltip examples https://www.w3schools.com/css/tryit.asp?filename=trycss_tooltip*/
+.buttons .tooltip{
+  visibility:hidden;
+  width:80px;
+  background-color:#373131;
+  color:#fafafa;
+  text-align: center;
+  border-radius:4px;
+  padding:2px 2px;
+  position:absolute;
+  z-index:2;
+  opacity:1;
+}
+
+.buttons :hover .tooltip {
+  visibility:visible;
+}
+
+/*Amend formatting for smaller screens*/
+@media(max-width:1024px){
+  .social{
+    text-align:center;
+    margin:5em 0 0 0;
+  }
+
+  .buttons>a>img{
+    max-width:80%;
+    height:auto;
+  }
+
+  .buttons{
+    padding:2px 2px;
+  }
+}
+
+
+/*|| 4.0 - Title & Author Format */
+.title{
+  text-align:center;
+}
+
+.author{
+  text-align:center;
+}
+
+.blog-main{
+  padding:0 15%;
+}
+
+/*|| 3.0 - Blog Content Format */
+.img-child{
+  max-width:50%;
+  height:auto;
+}
+
+.p-child{
+  line-height: 2em;
+}
+
+/* This table styling was adapted from W3 Schools CSS tables examples https://www.w3schools.com/css/css_table.asp*/
+.pasta{
+  margin-top: 2em;
+  margin-bottom:4em;
+}
+
+.pasta th, td{
+  text-align:left;
+  padding:2em;
+}
+
+.pasta tr:nth-child(even){
+  background-color: #f2f2f2;
+}
+
+.pasta th{
+  background-color:#1C2E4A;
+  color:#fafafa;
+}

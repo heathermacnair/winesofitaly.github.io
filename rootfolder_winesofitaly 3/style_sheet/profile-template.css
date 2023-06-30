@@ -1,0 +1,181 @@
+/*This document is the style sheet specific to the 'Wine Profile' pages within the Regional Wines Section of the Wines of Italy Website*/
+/*
+*CSS TABLE OF CONTENTS
+*
+* 1.0 - Flexbox Format
+* 2.0 - Column 1(About, Taste Profile)
+* 3.0 - Column 2 (Wine Name, Dominant Flavors, Grapes)
+* 4.0 - Column 3 (Pairings, Serving, Regions)
+*/
+
+
+/*||1.0 - Flexbox Format */
+.main-wine-content{
+  display:flex;
+  justify-content:space-between;
+}
+
+.profile-child1{
+  flex-basis:100%;
+  flex-grow:1;
+}
+
+.profile-child2{
+    flex-basis:100%;
+    flex-grow:1;
+    margin-right:40px;
+    margin-left: 40px;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.profile-child3{
+  flex-basis:100%;
+    flex-grow:1;
+    margin-bottom: 2em;
+}
+
+/* stack child elements for tablet and mobile screens - change flex direction from row to column */
+@media(max-width:1024px){
+  .main-wine-content{
+    display:flex;
+    justify-content:space-between;
+    flex-direction:column;
+    margin:0 4%;
+  }
+
+  .profile-child1{
+    flex-basis:100%;
+    flex-grow:1;
+    order:2;
+  }
+
+  .profile-child2{
+      flex-basis:100%;
+      flex-grow:1;
+      justify-content: flex-start;
+      align-items: left;
+      margin-left: 0;
+      margin-right:0;
+      order:1;
+      width: 100%;
+  }
+
+  .profile-child3{
+      flex-basis:100%;
+      flex-grow:1;
+      order:3;
+  }
+}
+
+
+/*|| 2.0 - Column 1 (About, Taste Profile) */
+/*align wine name in center of page*/
+.wine-name{
+  text-align:center;
+}
+
+.taste-profile img{
+  width:100%;
+  height:auto;
+}
+
+/*adjust formatting for tablet and mobile screens*/
+@media(max-width:1024px){
+  .about{
+    padding-bottom:1.5em;
+  }
+
+  .taste-profile{
+  padding-bottom:1.5em;
+  }
+
+  .wine-name{
+    text-align:left;
+    margin-top: 2em;
+  }
+
+/*align wine image left to be inline with text*/
+    .wine-name>img{
+      width:20em;
+      height:auto;
+      margin-left:-5em;
+    }
+
+    .taste-profile img{
+      width: 20em;
+      height: auto;
+  }
+}
+
+
+/*|| 3.0 - Column 2 (Wine Name, Dominant Flavors, Grapes) */
+.flavor-profile{
+  list-style-position: inside;
+  padding-left: 0px;
+}
+
+.flavor-profile>li{
+  text-align:center;
+  list-style-type:none;
+  display:inline-block;
+  padding: 10px 18px;
+}
+
+.grapes{
+  list-style-position: inside;
+  padding-left: 0px;
+}
+
+.grapes>li{
+  display: block;
+  text-align:left;
+  list-style-type:none;
+  padding: 10px 0px;
+}
+
+
+/*|| 4.0 - Column 4  (Pairings, Serving, Regions) */
+.pairings{
+  list-style-position: inside;
+  padding-left: 0px;
+}
+
+.pairings>li{
+  list-style-position: inside;
+  padding-left: 0px;
+  text-align:left;
+  list-style-type:none;
+  display: block;
+  padding: 10px 0px;
+}
+
+/* center align serving images above text*/
+.thermo-child{
+  display:inline-block;
+}
+
+.thermo-child img{
+  margin-left: 30px;
+}
+
+.glass-child{
+  display:inline-block;
+  margin-left:40px;
+}
+
+.glass-child img{
+  margin-left:35px;
+}
+
+
+/* adjust formatting for mobile screens*/
+@media(max-width:375px){
+  .thermo-child img{
+    margin-left:8px;
+  }
+
+    .glass-child img{
+    margin-left:12px;
+  }
+}
