@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+  <title>Wines of Italy</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="../../style_sheet/stylesheet.css">
+  <link rel="stylesheet" href="../../style_sheet/profile-template.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+
+<body>
+
+<div class="content-wrap">
+  <header>
+    <a href="../../index.html"><img src="../../images/logo.svg" alt="Wine's of Italy Logo"/></a>
+  </header>
+
+  <div class="top-elements">
+    <!-- Search bar has been adapted from W3 Schools CSS search bar examples https://www.w3schools.com/howto/howto_css_searchbar.asp*/ -->
+    <!--Accessed: November 1, 2020-->
+    <form action="#" target="_self" method="get" class="search" id="searchform">
+      <input type="search" name="search" placeholder="Search..." id="searchInput"/>
+      <button type="submit" class="search__button"><i class="material-icons md-light">search</i></button>
+    </form>
+    <!-- End of W3C Schools search bar adaptation -->
+
+    <nav>
+      <ul class="nav-links" aria-label="main-navigation">
+        <li><a href="../../regions.html" class="active">Regions</a></li>
+        <li><a href="../../blog.html">Blog</a></li>
+        <li><a href="../../resources.html">Resources</a></li>
+      </ul>
+      <!-- This nav bar hamburger has been adapted from Dev Ed's YouTube Responsive Navigation Tutorial https://www.youtube.com/watch?v=gXkqy0b4M5g&t=1550s - code play file: https://www.codeply.com/p/hVa3gv9Umw-->
+      <!-- Accessed: February 1, 2021-->
+      <a aria-hidden="true" href="#"class="burger">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+      </a>
+      <!-- End of responsive hamburger-->
+    </nav>
+  </div>
+
+  <div id='searchResults'></div>
+
+  <div class="breadcrumbs">
+    <h5><a href="../../regions.html" class="bactive">Regions</a> - <a href="../veneto.html" class="bactive">Veneto</a> - Pinot-Grigio</h5>
+  </div>
+
+  <main class="main-wine-content">
+
+    <div class="profile-child1">
+      <section class="about">
+        <h3>About</h3>
+        <p>Pinot Grigio is native to Burgundy France and was brought over to Italy during the 19th Century. It is the most popular white wine in Italy and accounts for 43% of the world’s production of Pinot Grigio.  With its light and crisp taste, Pinot Grigio  is very versatile and pairs well with so many dishes. Pinot Grigio is DOC recognized. </p>
+      </section>
+
+      <section class="taste-profile">
+        <h3>Taste Profile</h3>
+        <img src="../../images/pinot-grigio.svg" alt="taste profile"/>
+      </section>
+    </div>
+
+    <div class="profile-child2">
+      <section class="wine-name">
+        <h1>Pinot Grigio</h1>
+        <p>“PEE-no-GREE-jo”</p>
+        <img src="../../images/wine-glass-white.svg" alt="wine glass"/>
+      </section>
+
+      <section>
+        <h3>Dominant Flavors</h3>
+        <ul class="flavor-profile">
+          <li><img src="../../images/lime.svg" alt="lime"/><br/>Lime</li>
+          <li><img src="../../images/green-apple.svg" alt="orange"/><br/>Green Apple</li>
+          <li><img src="../../images/lemon.svg" alt="lemon"/><br/>Lemon</li>
+          <li><img src="../../images/almond.svg" alt="almond"/><br/>Almond</li>
+        </ul>
+      </section>
+
+      <section>
+        <h3>Grapes</h3>
+        <ul class="grapes">
+          <li><strong>Pinot Grigio:</strong><br/>are a white mutation of the Pinot Noir family. The grapes are typically green or pink in color.
+          </li>
+        </ul>
+      </section>
+    </div>
+
+    <div class="profile-child3">
+      <section>
+        <h3>Pairings</h3>
+        <ul class="pairings">
+          <li><strong>Cheese:</strong><br/>Gruyere, Muenster, and Grana Padano</li>
+          <li><strong>Fish:</strong><br/>tilapia, scallops, sea bass, perch, sole, haddock, trout, cod, halibut, snapper, mussels, clams, oysters, shrimp</li>
+          <li><strong>Meat:</strong><br/>turkey and chicken</li>
+          <li><strong>Vegetables:</strong><br/>green salad, shallots, garlic, ginger, cucumber, yellow squash, kale, green apple, broccoli, white beans, cauliflower, broccoli</li>
+        </ul>
+      </section>
+
+      <section class="serving">
+        <h3>Serving</h3>
+        <div class="thermo-child">
+          <img src="../../images/thermometer.svg" alt="thermometer"/>
+          <p>5&#8451;- 7&#8451;</p>
+        </div>
+        <div class="glass-child">
+          <img src="../../images/universal-wine-glass.svg" alt="universal glass"/>
+          <p>Universal Glass</p>
+        </div>
+      </section>
+
+      <section class="wine-region">
+        <h3>Regions</h3>
+        <p>Firuli Venezie Giulia<br/>Veneto <br/> Trento-Alto Adige</p>
+      </section>
+    </div>
+  </main>
+</div>
+
+<footer>
+  <section class="resources">
+    <h4>References:</h4>
+    <a href="https://vinepair.com/articles/illustrated-guide-pinot-grigio-italy/" target="_blank">Vine Pair</a><br/>
+    <a href="https://www.thewinesociety.com/grapes-pinot-gris" target="_blank">The Wine Society</a><br/>
+    <a href="https://www.thedrinksbusiness.com/2017/09/everything-you-need-to-know-about-pinot-grigio/" target="_blank">The Drink Business</a><br/>
+    <a href="https://www.youtube.com/watch?v=gXkqy0b4M5g&t=1550s" target="_blank">Dev Ed</a>
+  </section>
+
+  <h6> &#169; 2021 David Zamperin</h6>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous"></script>
+<script src="../../javaScript/searchjQuery.js"></script>
+<script src="../../javaScript/navjQuery.js"></script>
+
+</body>
+
+</html>

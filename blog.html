@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+  <title>Wines of Italy</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="style_sheet/stylesheet.css">
+  <link rel="stylesheet" href="style_sheet/blog.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+
+<body>
+
+<div class="content-wrap">
+  <header>
+    <a href="index.html"><img src="images/logo.svg" alt="Wine's of Italy Logo"/></a>
+  </header>
+
+  <div class="top-elements">
+
+  <!-- Search bar has been adapted from W3 Schools CSS search bar examples https://www.w3schools.com/howto/howto_css_searchbar.asp*/ -->
+  <!--Accessed: November 1, 2020-->
+  <form action="#" target="_self" method="get" class="search" id="searchform">
+    <input type="search" name="search" placeholder="Search..." id="searchInput"/>
+    <button type="submit" class="search__button"><i class="material-icons md-light">search</i></button>
+  </form>
+  <!-- End of W3C Schools search bar adaptation -->
+
+  <nav aria-label="main-navigation">
+    <ul class="nav-links">
+      <li><a href="regions.html">Regions</a></li>
+      <li><a href="blog.html" class="active">Blog</a></li>
+      <li><a href="resources.html">Resources</a></li>
+    </ul>
+    <!-- This nav bar hamburger has been adapted from Dev Ed's YouTube Responsive Navigation Tutorial https://www.youtube.com/watch?v=gXkqy0b4M5g&t=1550s - code play file: https://www.codeply.com/p/hVa3gv9Umw-->
+    <!-- Accessed: February 1, 2021-->
+    <a aria-hidden="true" href="#"class="burger">
+      <div class="line1"></div>
+      <div class="line2"></div>
+      <div class="line3"></div>
+    </a>
+    <!-- End of responsive hamburger-->
+  </nav>
+  </div>
+
+  <div id='searchResults'></div>
+
+  <div class="breadcrumbs">
+    <h5>Blog</h5>
+  </div>
+
+  <!-- Form Popup has been adapted from W3 Schools CSS search bar examples https://www.w3schools.com/howto/howto_js_popup_form.asp -->
+  <div class="form-popup">
+    <form action="mailto:dzamperin1@athabasca.edu" method="post" enctype="text/plain" autocomplete="on" id="subscriber-form" class="form-container">
+      <h4>Keep up with the latest<br/><img src="images/woi-white.svg" alt="wines of italy" id="woi-form"><br/>news and subscribe!</h4>
+      <label for="email">E-mail:</label><br/>
+      <input type="email" id="email" name="email"/><br/>
+      <span class="helper-text" id="emailError"></span><br/>
+      <label for="fname">First name:</label><br/>
+      <input type="text" id="fname" name="fname"/><br/>
+      <span class="helper-text" id="fNameError"></span><br/>
+      <label for="lname">Last name:</label><br/>
+      <input type="text" id="lname" name="lname"/><br/>
+      <span class="helper-text" id="lNameError"></span><br/>
+      <button type="submit" value="Send" class="send-btn" formnovalidate="formnovalidate">Submit</button>
+      <button type="submit" value="Close" class="close-btn" onclick="closeForm()">Close</button>
+    </form>
+  </div>
+  <!-- End of W3C Schools Form Popup adaptation -->
+
+  <main class="main-content">
+    <article class="blog-post-container">
+      <div class="blog-image">
+        <img src="images/whatsinagrapeblogpost.png" alt="grapes"/>
+      </div>
+      <div class="preview">
+        <a href="#">
+          <h2>What's in a Grape?</h2>
+          <p class="preview-desc">Understand the different characteristics that define grape varietals to create heavenly blends of wine.</p>
+          <p class="blogunderline">Coming Soon!</p>
+        </a>
+      </div>
+    </article>
+
+    <article class="blog-post-container">
+      <div class="blog-image">
+        <img src="images/pairingwinewithpastablogpost.png" alt="pasta"/>
+      </div>
+      <div class="preview">
+        <a href="blogpost-pasta.html">
+          <h2>Pairing Wine with Pasta</h2>
+          <p class="preview-desc">Don’t know what wine to pair with your next pasta dish? The true secret is to match your wine with the flavours in the sauce! Learn which sauces pair well with different wines.</p>
+          <p class="blogunderline">Read More</p>
+        </a>
+      </div>
+    </article>
+
+    <article class="blog-post-container">
+      <div class="blog-image">
+        <img src="images/whyisproseccosospecialblogpost.png" alt="prosecco"/>
+        </div>
+        <div class="preview">
+        <a href="#">
+          <h2>Why is Prosecco so Special?</h2>
+          <p class="preview-desc">Learn about different levels of prosecco quality and why it is one of the most popular celebratory beverages of choice!</p>
+          <p class="blogunderline">Read More</p>
+        </a>
+      </div>
+    </article>
+  </main>
+</div>
+
+<footer>
+  <section class="resources">
+  <h4>Refrences:</h4>
+  <a href="https://www.youtube.com/watch?v=gXkqy0b4M5g&t=1550s">Dev Ed</a>
+  </section>
+  <h6> &#169; 2021 David Zamperin</h6>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous"></script>
+<script src="javaScript/searchjQuery.js"></script>
+<script src="javaScript/navjQuery.js"></script>
+<script src="javaScript/formValidationJQuery.js"></script>
+
+</body>
+
+</html>

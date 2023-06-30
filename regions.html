@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+  <title>Wines of Italy</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="style_sheet/stylesheet.css">
+  <link rel="stylesheet" href="style_sheet/regions.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+
+<body>
+
+<div class="content-wrap">
+  <header>
+    <a href="index.html"><img src="images/logo.svg" alt="Wine's of Italy Logo"/></a>
+  </header>
+
+  <div class="top-elements">
+
+    <!-- Search bar has been adapted from W3 Schools CSS search bar examples https://www.w3schools.com/howto/howto_css_searchbar.asp*/ -->
+    <!--Accessed: November 1, 2020-->
+    <form action="#" target="_self" method="get" class="search" id="searchform">
+      <input type="search" name="search" placeholder="Search..." class="search__input" id="searchInput"/>
+      <button type="submit" class="search__button"><i class="material-icons md-light">search</i></button>
+    </form>
+    <!-- End of W3C Schools search bar adaptation -->
+
+    <nav aria-label="main-navigation">
+      <ul class="nav-links">
+        <li><a href="regions.html" class="active">Regions</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="resources.html">Resources</a></li>
+      </ul>
+      <!-- This nav bar hamburger has been adapted from Dev Ed's YouTube Responsive Navigation Tutorial https://www.youtube.com/watch?v=gXkqy0b4M5g&t=1550s - code play file: https://www.codeply.com/p/hVa3gv9Umw-->
+      <!-- Accessed: February 1, 2021-->
+      <a aria-hidden="true" href="#"class="burger">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+      </a>
+      <!-- End of responsive hamburger-->
+    </nav>
+  </div>
+
+  <div id='searchResults'></div>
+
+  <div class="breadcrumbs">
+    <h5>Regions</h5>
+  </div>
+
+  <main>
+
+  <div id="welcome-regions">
+    <h2>Explore the different regions of Italy and learn about their unique wines!</h2>
+  </div>
+
+  <div class="container">
+    <figure class="child1">
+      <object type="image/svg+xml" data="images/italy-vector-maps.svg" id="map"></object>
+    </figure>
+
+    <div class="child2">
+      <section class="pop-regions">
+        <h3>Popular Regions</h3>
+        <ul id="popular-regions">
+          <li><a href="italian_regions/veneto.html"><img src="images/veneto-circle.png" alt="veneto"/><br/>Veneto</a></li>
+          <li><a href="italian_regions/piedmont.html"><img src="images/piedmont-circle.png" alt="piedmont"/><br/>Piedmont</a></li>
+          <li><a href="italian_regions/tuscany.html"><img src="images/tuscany-circle.png" alt="tuscany"/><br/>Tuscany</a></li>
+          <li><a href="italian_regions/sicily.html"><img src="images/sicily-circle.png" alt="sicily"/><br/>Sicily</a></li>
+        </ul>
+      </section>
+
+      <section class="mobile-listregions">
+        <div>
+        <h3>North Italy</h3>
+        <ul class="listregions">
+          <li><a href="#">Friuli Venezia Giulia</a></li>
+          <li><a href="#">Lombardia</a></li>
+          <li><a href="italian_regions/piedmont.html">Piedmont</a></li>
+          <li><a href="#">Trentino-Alto Adige</a></li>
+          <li><a href="#">Valle D'Aosta</a></li>
+          <li><a href="italian_regions/veneto.html">Veneto</a></li>
+       </ul>
+      </div>
+      <div>
+       <h3>Central Italy</h3>
+       <ul class="listregions">
+        <li> <a href="#">Abruzzo</a></li>
+        <li><a href="#">Emilia Romagna</a></li>
+        <li><a href="#">Lazio</a></li>
+        <li><a href="#">Liguria</a></li>
+        <li><a href="#">Marche</a></li>
+        <li><a href="#">Molise</a></li>
+        <li><a href="italian_regions/tuscany.html">Toscana</a></li>
+        <li> <a href="#">Umbria</a></li>
+      </ul>
+      </div>
+      <div>
+      <h3>South Italy</h3>
+      <ul class="listregions">
+        <li><a href="#">Basilicata</a></li>
+        <li><a href="#">Calabria</a></li>
+        <li><a href="#">Campania</a></li>
+        <li><a href="#">Puglia</a></li>
+        <li><a href="#">Sardinia</a></li>
+        <li><a href="italian_regions/sicily.html">Sicilia</a></li>
+      </ul>
+      </div>
+      </section>
+
+      <section class="facts">
+        <h3>Wine Facts</h3>
+        <ul id="wine-facts">
+          <li>Italy is the largest producer of wine in the world due to their perfect climate allowing for the growth of more than 2,000 grape varieties.</li>
+          <li> Italy is the birthplace of prosecco and the producer of many other famous wines such as Barolo, Valpolicella, Amarone, and Chianti.</li>
+          <li> Italy’s wine industry is continuously growing with total sales reaching $6.4 billion euros in 2019. </li>
+          <li>Italian wine production began around 4,000 years ago.</li>
+        </ul>
+      </section>
+    </div>
+  </main>
+</div>
+
+<footer>
+  <section class="resources">
+  <h4>Refrences:</h4>
+  <a href="https://www.winemag.com/2019/09/19/the-rise-of-italian-grapes-in-american-vineyards/" target="_blank">WineEnthusiast</a><br/>
+  <a href="https://news.italianfood.net/2020/03/16/italian-wine-exports-growth-does-not-stop-in-2019/" target="_blank">ItalianFood.net</a><br/>
+  <a href="https://www.youtube.com/watch?v=gXkqy0b4M5g&t=1550s" target="_blank">Dev Ed</a><br/>
+  <a href="https://www.petercollingridge.co.uk/tutorials/svg/interactive/tooltip/" target="_blank">Peter Coolingridge</a>
+  </section>
+
+  <h6> &#169; 2021 David Zamperin</h6>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous"></script>
+<script src="javaScript/searchjQuery.js"></script>
+<script src="javaScript/navjQuery.js"></script>
+<script src="javaScript/highlightRegion.js"></script>
+
+</body>
+
+</html>

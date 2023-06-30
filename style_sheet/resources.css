@@ -1,0 +1,127 @@
+/* This document is the style sheet specific to the 'Resources' page on the Wines of Italy Website */
+/*
+  CSS TABLE OF CONTENTS:
+  1.0 - Flexbox Format
+  2.0 - Resources Content Format
+  3.0 - Wine Bottle Format
+  4.0 - News Articles
+*/
+
+/*|| 1.0 - Flexbox Format */
+.container-resources{
+  -webkit-box-align:center;
+      -ms-flex-align:center;
+          align-items:center;
+  display:-webkit-box;
+  display:-ms-flexbox;
+  display:flex;
+  -ms-flex-preferred-size:100%;
+      flex-basis:100%;
+  -webkit-box-orient:vertical;
+  -webkit-box-direction:normal;
+      -ms-flex-direction:column;
+          flex-direction:column;
+  -webkit-box-pack:center;
+      -ms-flex-pack:center;
+          justify-content:center;
+  margin-bottom:1em;
+}
+
+/* remove image for tablet and mobile */
+.cr-child1{
+  display:none;
+}
+
+.cr-child2{
+  -ms-flex-preferred-size:100%;
+      flex-basis:100%;
+  margin:2em 0 0 0;
+}
+
+/* change flex direction to row for desktop */
+@media screen and (min-width:1025px){
+  .container-resources{
+    -webkit-box-align:start;
+        -ms-flex-align:start;
+            align-items:flex-start;
+    -webkit-box-orient:horizontal;
+    -webkit-box-direction:normal;
+        -ms-flex-direction:row;
+            flex-direction:row;
+    -webkit-box-pack:center;
+        -ms-flex-pack:center;
+            justify-content:center;
+    }
+
+  /* add wine bottle image for desktop */
+  .cr-child1{
+    -ms-flex-item-align:start;
+        align-self:flex-start;
+    display:block;
+    margin:2em 0 0 4em;
+  }
+
+  .cr-child2{
+    margin:0 0 0 8em;
+  }
+}
+
+
+/*|| 2.0 - Resources Content Format */
+.resources {
+  list-style-position:inside;
+  margin: 0;
+  padding:0;
+  text-align:left;
+}
+
+.resources li {
+  list-style-type:none;
+  line-height:1.4em;
+  margin-bottom:3em;
+}
+
+
+/*|| 3.0 - Wine Bottle Format */
+.winebottle{
+  max-height:100%;
+  width:auto;
+}
+
+/*|| 4.0 - News Article Styling */
+
+.eventTitle, .description{
+    font-family:'Open Sans', sans-serif;
+}
+
+.eventTitle{
+  font-size: 1.5em;
+  font-weight:bold;
+  color:#5e1224;
+  margin-top: 1em;
+}
+
+.description{
+  font-size: 1.2em;
+  color:#1C2E4A;
+  max-width:800px;
+  padding-bottom:1em;
+
+}
+
+.newsImage{
+  max-width: 200px;
+  text-align:center;
+}
+
+.news{
+  margin:1em;
+}
+
+#events{
+  max-width:1400px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  padding:2em;
+}

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+  <title>Wines of Italy</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="../../style_sheet/stylesheet.css">
+  <link rel="stylesheet" href="../../style_sheet/profile-template.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+
+<body>
+
+<div class="content-wrap">
+  <header>
+    <a href="../../index.html"><img src="../../images/logo.svg" alt="Wine's of Italy Logo"/></a>
+  </header>
+
+  <div class="top-elements">
+    <!-- Search bar has been adapted from W3 Schools CSS search bar examples https://www.w3schools.com/howto/howto_css_searchbar.asp*/ -->
+    <!--Accessed: November 1, 2020-->
+    <form action="#" target="_self" method="get" class="search" id="searchform">
+      <input type="search" name="search" placeholder="Search..." id="searchInput"/>
+      <button type="submit" class="search__button"><i class="material-icons md-light">search</i></button>
+    </form>
+    <!-- End of W3C Schools search bar adaptation -->
+
+    <nav>
+      <ul class="nav-links" aria-label="main-navigation">
+        <li><a href="../../regions.html" class="active">Regions</a></li>
+        <li><a href="../../blog.html">Blog</a></li>
+        <li><a href="../../resources.html">Resources</a></li>
+      </ul>
+      <!-- This nav bar hamburger has been adapted from Dev Ed's YouTube Responsive Navigation Tutorial https://www.youtube.com/watch?v=gXkqy0b4M5g&t=1550s - code play file: https://www.codeply.com/p/hVa3gv9Umw-->
+      <!-- Accessed: February 1, 2021-->
+      <a aria-hidden="true" href="#"class="burger">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+      </a>
+      <!-- End of responsive hamburger-->
+    </nav>
+  </div>
+
+  <div id='searchResults'></div>
+
+  <div class="breadcrumbs">
+    <h5><a href="../../regions.html" class="bactive">Regions</a> - <a href="../veneto.html" class="bactive">Veneto</a> - Merlot</h5>
+  </div>
+
+  <main class="main-wine-content">
+
+    <div class="profile-child1">
+      <section class="about">
+        <h3>About</h3>
+        <p> Merlot is one of the world’s most well known wines that originated in Bordeaux France. It is the fifth most planted grape in Italy and is typically used in a variety of wine blends. Tuscan Merlot has been coined a “Super-Tuscan” Wine, a high quality wine that should be designated DOC or DOCG but is unable to because the wine includes non-indegenous grape varietals. A fun fact about Merlot is that it is the genetic “child’ of  Cabernet Franc.</p>
+      </section>
+
+      <section class="taste-profile">
+        <h3>Taste Profile</h3>
+        <img src="../../images/merlot.svg" alt="wine glass"/>
+      </section>
+    </div>
+
+    <div class="profile-child2">
+      <section class="wine-name">
+        <h1>Merlot</h1>
+        <p>"mer-LO"</p>
+        <img src="../../images/large-wineglass.svg" alt="wine glass"/>
+      </section>
+
+      <section>
+        <h3>Dominant Flavors</h3>
+        <ul class="flavor-profile">
+          <li><img src= "../../images/black-cherry.svg" alt="cherry"/><br/>Black Cherry</li>
+          <li><img src= "../../images/plum.svg" alt="plum"/><br/>Plum</li>
+          <li><img src= "../../images/herbs.svg" alt="herbs"/><br/>Herbs</li>
+          <li><img src= "../../images/vanilla.svg" alt="vanilla"/><br/>Vanilla</li>
+        </ul>
+      </section>
+
+      <section>
+        <h3>Grapes</h3>
+        <ul class="grapes">
+          <li><strong>Merlot:</strong><br/>provides fruity aromas and supple full-bodied flavours.</li>
+        </ul>
+      </section>
+    </div>
+
+    <div class="profile-child3">
+      <section>
+        <h3>Pairings</h3>
+        <ul class="pairings">
+          <li><strong>Cheese:</strong><br/>Aged Goat, Gorgonzola, and Cheddar</li>
+          <li><strong>Meat:</strong><br/>beef short rib, pork loin, roast turkey, fillet mignon, roast veal, rack of lamb</li>
+          <li><strong>Vegetable:</strong><br/>roasted tomatoes, ratatouille, and mushrooms</li>
+          <li><strong>Other:</strong><br/>tarragon, garlic, barries, tomato sauce based dishes</li>
+        </ul>
+      </section>
+
+      <section class="serving">
+        <h3>Serving</h3>
+        <div class="thermo-child">
+          <img src="../../images/thermometer.svg" alt="thermometer"/>
+          <p>15&#8451;- 20&#8451;</p>
+        </div>
+        <div class="glass-child">
+          <img src="../../images/burgundy-glass.svg" alt="burgundy glass"/>
+          <p>Burgundy Glass</p>
+        </div>
+      </section>
+
+      <section class="wine-region">
+        <h3>Regions</h3>
+        <p>Friuli Venezia Giulia<br/>Veneto<br/> Trentino Alto Adige<br/> Tuscany<br/>Umbria<br/>Lazio</p>
+      </section>
+    </div>
+  </main>
+</div>
+
+<footer>
+  <section class="resources">
+    <h4>References:</h4>
+    <a href="https://winefolly.com/grapes/merlot/" target="_blank">Wine Folly</a><br/>
+    <a href="https://www.winewordswisdom.com/wine_reviews/best-merlots.html#:~:text=It%20is%20the%20fifth%20most,Veneto%20regions%20in%20northeastern%20Italy" target="_blank">Wine Words Wisdom</a><br/>
+    <a href="https://www.bigoven.com/article/recipe/merlot-food-pairing" target="_blank">Big Oven</a><br/>
+    <a href="https://www.youtube.com/watch?v=gXkqy0b4M5g&t=1550s" target="_blank">Dev Ed</a>
+  </section>
+
+  <h6> &#169; 2021 David Zamperin</h6>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous"></script>
+<script src="../../javaScript/searchjQuery.js"></script>
+<script src="../../javaScript/navjQuery.js"></script>
+
+</body>
+
+</html>

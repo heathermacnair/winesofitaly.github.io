@@ -1,0 +1,184 @@
+/* This document is the style sheet specific to the 'Wine Profile' pages within the Regional Wines Section of the Wines of Italy Website */
+/*
+  CSS TABLE OF CONTENTS:
+  1.0 - Flexbox Format
+  2.0 - Column 1(About, Taste Profile)
+  3.0 - Column 2 (Wine Name, Dominant Flavors, Grapes)
+  4.0 - Column 3 (Pairings, Serving, Regions)
+*/
+
+/*||1.0 - Flexbox Format */
+/* stack child elements for tablet and mobile screens - change flex direction from row to column */
+.main-wine-content{
+  display:-webkit-box;
+  display:-ms-flexbox;
+  display:flex;
+  -webkit-box-pack:justify;
+      -ms-flex-pack:justify;
+          justify-content:space-between;
+  -webkit-box-orient:vertical;
+  -webkit-box-direction:normal;
+      -ms-flex-direction:column;
+          flex-direction:column;
+}
+
+.profile-child1{
+  -ms-flex-preferred-size:100%;
+      flex-basis:100%;
+  -webkit-box-flex:1;
+      -ms-flex-positive:1;
+          flex-grow:1;
+  -webkit-box-ordinal-group:3;
+      -ms-flex-order:2;
+          order:2;
+}
+
+.profile-child2{
+  -ms-flex-preferred-size:100%;
+      flex-basis:100%;
+  -webkit-box-flex:1;
+      -ms-flex-positive:1;
+          flex-grow:1;
+  -webkit-box-pack:start;
+      -ms-flex-pack:start;
+          justify-content:flex-start;
+  -webkit-box-ordinal-group:2;
+      -ms-flex-order:1;
+          order:1;
+  margin-top:2em;
+  width:100%;
+}
+
+.profile-child3{
+  -ms-flex-preferred-size:100%;
+      flex-basis:100%;
+  -webkit-box-flex:1;
+      -ms-flex-positive:1;
+          flex-grow:1;
+  -webkit-box-ordinal-group:4;
+      -ms-flex-order:3;
+          order:3;
+}
+
+/* change flex direction to row for most desktop screens */
+@media(min-width:1091px){
+  .main-wine-content{
+    -webkit-box-orient:horizontal;
+    -webkit-box-direction:normal;
+        -ms-flex-direction:row;
+            flex-direction:row;
+  }
+
+  .profile-child1{
+    -webkit-box-ordinal-group:2;
+        -ms-flex-order:1;
+            order:1;
+  }
+
+  .profile-child2{
+    -webkit-box-align:center;
+        -ms-flex-align:center;
+            align-items:center;
+    -webkit-box-pack:center;
+        -ms-flex-pack:center;
+            justify-content:center;
+    margin:0 4em 0 4em;
+    -webkit-box-ordinal-group:3;
+        -ms-flex-order:2;
+            order:2;
+  }
+
+  .profile-child3{
+    margin-bottom: 2em;
+    -webkit-box-ordinal-group:4;
+        -ms-flex-order:3;
+            order:3;
+  }
+}
+
+
+/*|| 2.0 - Column 1 (About, Taste Profile) */
+.about, .taste-profile{
+  padding-bottom:1.5em;
+}
+
+.taste-profile{
+  height:auto;
+  max-width:100%;
+}
+
+/* align wine image left to be inline with text */
+.taste-profile img{
+  height:auto;
+  max-width:100%;
+}
+
+/* align wine name in center of page on desktop */
+@media screen and (min-width:1024px){
+  .about, .taste-profile, .wine-name{
+    padding-bottom:0;
+  }
+}
+
+
+/*|| 3.0 - Column 2 (Wine Name, Dominant Flavors, Grapes) */
+.wine-name{
+  text-align:center;
+}
+
+.flavor-profile{
+  list-style-position: inside;
+  padding-left: 0px;
+}
+
+.flavor-profile>li{
+  display:inline-block;
+  list-style-type:none;
+  padding:1em 0.5em;
+  text-align:center;
+}
+
+.grapes{
+  list-style-position:inside;
+  padding-left:0;
+}
+
+.grapes>li{
+  display:block;
+  list-style-type:none;
+  padding:0.5em 0;
+  text-align:left;
+}
+
+
+/*|| 4.0 - Column 4  (Pairings, Serving, Regions) */
+.pairings{
+  list-style-position: inside;
+  padding-left:0;
+}
+
+.pairings>li{
+  display: block;
+  list-style-position:inside;
+  list-style-type:none;
+  padding: 0.5em 0;
+  text-align:left;
+}
+
+/* center align serving images above text */
+.thermo-child{
+  display:inline-block;
+}
+
+.thermo-child img{
+  margin-left:2em;
+}
+
+.glass-child{
+  display:inline-block;
+  margin-left:1em;
+}
+
+.glass-child img{
+  margin-left:3.5em;
+}

@@ -1,0 +1,566 @@
+/* This document is the main style sheet for elements that apply to the entire Wines of Italy website */
+/*
+  CSS TABLE OF CONTENTS:
+  1.0 - General Styles & Typography
+  2.0 - Flexbox Format
+  3.0 - Logo Styling
+  4.0 - Navigation Styling
+  5.0 - Breadcrumbs Styling
+  6.0 - Search Bar Styling
+  7.0 - Footer Styling
+*/
+
+
+/*|| 1.0 - General Styles & Typography */
+* {
+  font-family:'Open Sans', sans-serif;
+}
+
+body{
+  background-color: #fafafa;
+}
+
+h1, h2, h3, h4, h5, p{
+  color:#1C2E4A;
+}
+
+h1{
+  font-size:2.5em;
+}
+
+h2{
+  font-size:2.2em;
+}
+
+h3{
+  font-size:2em;
+}
+
+h4{
+  font-size:1.5em;
+}
+
+h5{
+  font-size:1.2em;
+  font-weight:300;
+}
+
+h6{
+  color:#fafafa;
+  font-size:1em;
+  font-weight:300;
+}
+
+p, li, button{
+  font-size:1.2em;
+  text-decoration:none;
+}
+
+p, th, td, li, a, li>a {
+  color:#1C2E4A;
+}
+
+a, label{
+  font-size:1em;
+  text-decoration:none;
+}
+
+li>a{
+  font-size:1.3em;
+  list-style-type:none;
+  text-decoration:none;
+}
+
+/*Hover state for anchor tags*/
+a:hover{
+color:#5E1224;
+}
+
+
+/*|| 2.0 Flexbox Format */
+* {
+  box-sizing: border-box;
+}
+
+html, body{
+  margin:0;
+  min-height:100vh;
+  padding:0;
+}
+
+body{
+  display:-webkit-box;
+    display:-ms-flexbox;
+    display:flex;
+    -webkit-box-orient:vertical;
+    -webkit-box-direction:normal;
+        -ms-flex-direction:column;
+            flex-direction:column;
+    overflow-x:scroll;
+    margin:auto;
+    -webkit-box-pack:center;
+        -ms-flex-pack:center;
+            justify-content:center;
+    -webkit-box-align:center;
+        -ms-flex-align:center;
+            align-items:center;
+  }
+
+.content-wrap{
+  min-height: 100vh;
+  padding-bottom: 2.5em;
+  max-width:1600px;
+  margin:auto;
+}
+
+main{
+  margin-top:10em;
+}
+
+@media screen and (min-width:1024px){
+  main{
+  margin-top:5em;
+  }
+}
+
+/* increase right and left margins for larger screen sizes */
+@media screen and (min-width:375px){
+  .content-wrap{
+    margin:0 2em;
+  }
+}
+
+/* display felxbox for top elements to organize and format search bar and navigation menu */
+.top-elements{
+  -webkit-box-align:center;
+      -ms-flex-align:center;
+          align-items:center;
+  display:-webkit-box;
+  display:flex;
+  display:-ms-flexbox;
+  -ms-flex-direction:row-reverse;
+  -webkit-box-orient:horizontal;
+  -webkit-box-direction:reverse;
+          flex-direction:row-reverse;
+  -webkit-box-pack:center;
+      -ms-flex-pack:center;
+          justify-content:center;
+}
+
+
+/* position search bar right */
+.search{
+display:-webkit-inline-box;
+display:inline-flex;
+display:-ms-inline-flexbox;
+-webkit-box-flex:1;
+    -ms-flex:1;
+        flex:1;
+max-width:14em;
+}
+
+/* position navigation center */
+nav{
+  margin:0 auto;
+}
+
+
+/*|| 3.0 - Logo Styling */
+header>a>img{
+    height:auto;
+    left:0.5em;
+    max-width:200px;
+    position:absolute;
+    top:1em;
+  }
+
+@media screen and (min-width:600px){
+  header>a>img{
+      max-width:300px;
+    }
+}
+
+@media screen and (min-width:1025px){
+  header>a>img{
+    float: none;
+    left:0;
+    max-width:100%;
+    position:relative;
+  }
+
+  /* center the logo on desktop screens */
+    header{
+    display:-webkit-box;
+    display:flex;
+    display:-ms-flexbox;
+    height:auto;
+    -webkit-box-pack:center;
+        -ms-flex-pack:center;
+            justify-content:center;
+    margin-top: 0.5em;
+  }
+}
+
+
+/*|| 4.0 - Navigation */
+
+/* Navigation has been adapted from Dev Ed's responsive navigation youtube tutorial https://www.youtube.com/watch?v=gXkqy0b4M5g */
+/* Accessed February 10, 2021
+
+/* style burger menu icon lines */
+.burger div {
+  background-color:#5e1224;
+  height:2px;
+  margin:4px;
+  -webkit-transition:all 0.3s ease;
+  -o-transition:all 0.3s ease;
+  transition:all 0.3s ease;
+  width:20px;
+}
+
+/* position burger menu icon */
+.burger{
+  cursor:pointer;
+  display:block;
+  right:1em;
+  position: absolute;
+  top:1.5em;
+  z-index:3;
+}
+
+@media screen and (min-width:600px){
+  .burger{
+    right:1.5em;
+    top:2.5em;
+    }
+}
+
+/* rotate line 1 and 3 to form an 'X' button when menu is open. Remove line 2 */
+.toggle .line1 {
+  -webkit-transform:rotate(-45deg) translate(-3px, 6px);
+      -ms-transform:rotate(-45deg) translate(-3px, 6px);
+          transform:rotate(-45deg) translate(-3px, 6px);
+}
+
+.toggle .line2 {
+  opacity:0;
+}
+
+.toggle .line3 {
+  -webkit-transform:rotate(45deg) translate(-3px, -6px);
+      -ms-transform:rotate(45deg) translate(-3px, -6px);
+          transform:rotate(45deg) translate(-3px, -6px);
+}
+
+/* style open navigation */
+.nav-links {
+  -webkit-box-align:center;
+      -ms-flex-align:center;
+          align-items:center;
+  background-color:#fafafa;
+  display:-webkit-box;
+  display:flex;
+  display:-ms-flexbox;
+  -webkit-box-orient:vertical;
+  -webkit-box-direction:normal;
+      -ms-flex-direction:column;
+          flex-direction:column;
+  height:100%;
+  -ms-flex-pack:distribute;
+      justify-content:space-around;
+  padding-left:0;
+  position:fixed;
+  right:0;
+  -webkit-transform:translateX(100%);
+      -ms-transform:translateX(100%);
+          transform:translateX(100%);
+  -webkit-transition:-webkit-transform 0.5s ease-in;
+  transition:-webkit-transform 0.5s ease-in;
+  -o-transition:transform 0.5s ease-in;
+  transition:transform 0.5s ease-in;
+  transition:transform 0.5s ease-in, -webkit-transform 0.5s ease-in;
+  width:100%;
+  z-index:3;
+}
+
+.nav-links>li {
+  list-style-type:none;
+  opacity:0;
+  margin:auto;
+}
+
+.nav-links>li>a{
+  color:#5e1224;
+  cursor:pointer;
+  font-weight:bold;
+  text-decoration:none;
+  text-transform:uppercase;
+}
+
+.nav-active {
+  -webkit-transform:translateX(0%);
+      -ms-transform:translateX(0%);
+          transform:translateX(0%);
+}
+
+/* animate navigation links to fade in when burger is clicked */
+@-webkit-keyframes navLinkFade {
+  from {
+      opacity:0;
+      -webkit-transform:translateX(50px);
+              transform:translateX(50px);
+  }
+  to {
+      opacity:1;
+      -webkit-transform:translateX(0);
+              transform:translateX(0);
+  }
+}
+@keyframes navLinkFade {
+  from {
+      opacity:0;
+      -webkit-transform:translateX(50px);
+              transform:translateX(50px);
+  }
+  to {
+      opacity:1;
+      -webkit-transform:translateX(0);
+              transform:translateX(0);
+  }
+}
+/* End of Dev Ed's navigation adaptation */
+
+@media screen and (min-width:1025px){
+  /* remove burger menu and replace with menu items for desktop*/
+  .burger{
+   display:none;
+  }
+
+  .nav-links{
+    -webkit-box-orient:horizontal;
+    -webkit-box-direction:normal;
+        -ms-flex-direction:row;
+            flex-direction:row;
+    height:0;
+    -webkit-box-pack:center;
+        -ms-flex-pack:center;
+            justify-content:center;
+    -webkit-box-align:center;
+        -ms-flex-align:center;
+            align-items:center;
+    list-style: inside;
+    margin-left:6em;
+    padding-bottom:1em;
+    position:relative;
+    text-align: center;
+    -webkit-transform:none;
+        -ms-transform:none;
+            transform:none;
+    -webkit-transition:none;
+    -o-transition:none;
+    transition:none;
+  }
+
+  .nav-links>li{
+    -ms-flex-item-align:start;
+        align-self:flex-start;
+    opacity:1;
+    padding:1em 1.5em 0 1.5em;
+  }
+
+  /* style nav links */
+  .nav-links>li>a{
+    border:none;
+    color:#373131;
+    font-weight:400;
+  }
+
+  /* style nav links on hover */
+  .nav-links>li>a:hover{
+    color:#5e1224;
+    text-decoration:underline;
+  }
+
+  /* color and bold nav item after click */
+  .nav-links>li>a.active{
+    color:#5e1224;
+    font-weight:700;
+  }
+}
+
+
+/*|| 5.0 - Breadcrumbs */
+.breadcrumbs{
+  -webkit-box-align:center;
+      -ms-flex-align:center;
+          align-items:center;
+  display:-webkit-box;
+  display:flex;
+  display:-ms-flexbox;
+  -webkit-box-pack:start;
+      -ms-flex-pack:start;
+          justify-content:flex-start;
+  margin-top:4.5em;
+  padding:0.5em;
+  position:absolute;
+}
+
+/* increase font weight for clickable breadcrumbs */
+.bactive{
+  font-weight:800;
+}
+
+@media screen and (min-width:1025px){
+  .breadcrumbs{
+    -webkit-box-align:center;
+        -ms-flex-align:center;
+            align-items:center;
+    display:-webkit-box;
+    display:flex;
+    display:-ms-flexbox;
+    -webkit-box-pack:start;
+        -ms-flex-pack:start;
+            justify-content:flex-start;
+    margin:0 0 0 2em;
+  }
+}
+
+
+/*|| 6.0 - Search Bar */
+/* hide search bar input and display clickable search icon for animated full screen search. */
+.search input[type="search"]{
+  /* display:none;*/
+background-color:#fafafa;
+border:none;
+border-bottom: solid #5E1224 0.5px;
+font-size:1em;
+min-width:95%;
+position:absolute;
+right:1em;
+top:4.5em;
+text-indent:1em;
+}
+
+.search button{
+  background-color:inherit;
+  border:none;
+  display:-webkit-inline-box;
+  display:inline-flex;
+  display:-ms-inline-flexbox;
+  float:right;
+  padding:0;
+  position:absolute;
+  top:3.5em;
+  right:1em;
+  text-indent:none;
+}
+
+.nav button:hover{
+  background-color:inherit;
+}
+
+/* style search icon */
+button .material-icons{
+  color:#5E1224;
+  font-size:25px;
+  vertical-align:top;
+}
+
+@media screen and (min-width:600px){
+  .search input[type="search"]{
+    right:4.5em;
+    top:2.5em;
+    min-width:20%;
+    margin-left:0;
+  }
+
+  .search button{
+    right:4em;
+    top:2em;
+  }
+}
+
+/* Search bar has been adapted from W3 Schools CSS search bar examples https://www.w3schools.com/howto/howto_css_searchbar.asp */
+@media screen and (min-width:1025px){
+  .search input[type="search"]{
+    display:block;
+    background-color:#fafafa;
+    border:1px solid#373131;
+    border-radius:0.2em 0 0 0.2em;
+    font-size:1em;
+    padding:0.5em;
+    text-indent:0.5em;
+    width:14em;
+    position:inherit;
+  }
+
+  .search input[type="search"]:focus{
+    outline-color:#D4AF37;
+  }
+
+  /* round corners on left side of button to match rounded corners on right side of search input */
+  .search button{
+    background-color:#5e1224;
+    border-radius:0 0.2em 0.2em 0;
+    border:none;
+    cursor:pointer;
+    padding:0.4em;
+    position:inherit;
+  }
+
+  .search button:hover{
+    background-color:#861F37;
+  }
+
+  button .material-icons{
+    color:#fafafa;
+    font-size:1.5em;
+    vertical-align:middle;
+  }
+}
+/* End of W3C Schools search bar adaptation */
+
+/* Style search results */
+#searchResults{
+  background-color:#fafafa;
+  text-align:center;
+}
+#searchResults h2{
+  margin-top:3em;
+}
+
+#searchResults a{
+  font-size: 1.5em;
+}
+
+@media screen and (min-width:1025px){
+  #searchResults h2{
+    margin-top:2em;
+  }
+}
+
+/*|| 7.0 - Footer ***/
+footer{
+  background-color:#5E1224;
+  bottom:0;
+  padding:1em 2em;
+  min-width:100%;
+}
+
+footer>h6 {
+  text-align:center;
+}
+
+.resources{
+  margin-left:0.5em;
+}
+
+.resources>h4, .resources>a{
+  color:#fafafa;
+  line-height:150%;
+}
+
+.resources>a:hover{
+  color:#1C2E4A;
+  font-weight:500;
+}

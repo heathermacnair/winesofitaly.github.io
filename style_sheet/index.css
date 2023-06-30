@@ -1,0 +1,73 @@
+/* this code pertains to the styling of the home (index.html) page.
+
+/*The majority of this code has been copied from jqueryscript.net Responsive Bootstrap Carousel with Multiple Items Per Slide https://www.jqueryscript.net/slider/responsive-bootstrap-carousel-multiple-items.html
+/*Accessed: April 25, 2021
+
+/*general styles*/
+.container{
+  margin: 150px auto;
+}
+body{
+  background-color:#fafafa;
+}
+.bg-dark{
+  background-color:#1C2E4A!important;
+}
+h2,h4{
+  font-weight:bold;
+}
+.twitter{
+  text-align: center;
+}
+main{
+  max-width: 1060px;
+}
+
+/* medium - display 2  */
+@media (min-width: 768px) {
+
+    .carousel-inner .carousel-item-right.active,
+    .carousel-inner .carousel-item-next {
+        transform: translateX(50%);
+    }
+
+    .carousel-inner .carousel-item-left.active,
+    .carousel-inner .carousel-item-prev {
+        transform: translateX(-50%);
+    }
+}
+
+/* large - display 3 */
+@media (min-width: 992px) {
+
+    .carousel-inner .carousel-item-right.active,
+    .carousel-inner .carousel-item-next {
+        transform: translateX(33%);
+    }
+
+    .carousel-inner .carousel-item-left.active,
+    .carousel-inner .carousel-item-prev {
+        transform: translateX(-33%);
+    }
+}
+
+@media (max-width: 768px) {
+    .carousel-inner .carousel-item>div {
+        display: none;
+    }
+
+    .carousel-inner .carousel-item>div:first-child {
+        display: block;
+    }
+}
+
+.carousel-inner .carousel-item.active,
+.carousel-inner .carousel-item-next,
+.carousel-inner .carousel-item-prev {
+    display: flex;
+}
+
+.carousel-inner .carousel-item-right,
+.carousel-inner .carousel-item-left {
+    transform: translateX(0);
+}

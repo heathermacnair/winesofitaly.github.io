@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+  <title>Wines of Italy</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="../style_sheet/stylesheet.css">
+  <link rel="stylesheet" href="../style_sheet/region-template.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+
+<body>
+
+<div class="content-wrap">
+  <header>
+    <a href="../index.html"><img src="../images/logo.svg" alt="Wine's of Italy Logo"/></a>
+  </header>
+
+  <div class="top-elements">
+    <!-- Search bar has been adapted from W3 Schools CSS search bar examples https://www.w3schools.com/howto/howto_css_searchbar.asp*/ -->
+    <!--Accessed: November 1, 2020-->
+    <form action="#" target="_self" method="get" class="search" id="searchform">
+      <input type="search" name="search" placeholder="Search..." id="searchInput"/>
+      <button type="submit" class="search__button"><i class="material-icons md-light">search</i></button>
+    </form>
+    <!-- End of W3C Schools search bar adaptation -->
+
+    <nav>
+      <ul class="nav-links" aria-label="main-navigation">
+        <li><a href="../regions.html" class="active">Regions</a></li>
+        <li><a href="../blog.html">Blog</a></li>
+        <li><a href="../resources.html">Resources</a></li>
+      </ul>
+      <!-- This nav bar hamburger has been adapted from Dev Ed's YouTube Responsive Navigation Tutorial https://www.youtube.com/watch?v=gXkqy0b4M5g&t=1550s - code play file: https://www.codeply.com/p/hVa3gv9Umw-->
+      <!-- Accessed: February 1, 2021-->
+      <a aria-hidden="true" href="#"class="burger">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+      </a>
+      <!-- End of responsive hamburger-->
+    </nav>
+  </div>
+
+  <div id='searchResults'></div>
+
+  <div class="breadcrumbs">
+    <h5><a href="../regions.html" class="bactive">Regions</a> - Tuscany</h5>
+  </div>
+
+  <main class="regional-container">
+    <figure class="italy-map">
+      <object type="image/svg+xml" data="../images/italy-vector-maps.svg" id="map"></object>
+    </figure>
+
+    <div class="regional-content">
+     <section class="region-information">
+        <h1 class="rname"><img src=../images/location-vector.svg alt=location class="location"/>Tuscany</h1>
+        <p>Tuscany is famously known for their beautiful countryside, rolling hills and pungent red wines! Its warm climate and intricate landscapes are optimal for producing wines with exceptional grape sugar, acidity, and aromatic balance. </p>
+      </section>
+
+      <section class="regional-wines">
+        <div class="rwine-group">
+          <h3>Red Wines:</h3>
+          <ul class="rwines">
+            <li><a href="#"><img src="../images/rwineglass.svg" alt="wine glass"/><span class="winetext">Chianti</span></a></li>
+            <li><a href="#"><img src="../images/rwineglass.svg" alt="wine glass"/><span class="winetext">Brunello di Montalcino</span></a></li>
+            <li><a href="#"><img src="../images/rwineglass.svg" alt="wine glass"/><span class="winetext">Cabernet Sauvignon</span></a></li>
+          </ul>
+        </div>
+        <div class="wwine-group">
+          <h3>White Wines:</h3>
+          <ul class="rwines">
+            <li><a href="#"><img src="../images/wwineglass.svg" alt="wine glass"/><span class="winetext">Vin Santo</span></a></li>
+            <li><a href="#"><img src="../images/wwineglass.svg" alt="wine glass"/><span class="winetext">Chardonnay</span></a></li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="popular-vineyards">
+        <h2>Popular Vineyards</h2>
+        <ul class="rwines">
+          <li><img src="../images/vineyardgrapes.svg" alt="grapes"/><a href="https://www.frescobaldi.com/tenute/castello-nipozzano" target="_blank"> Frescobaldi Toscana - Firenze, Tuscany</a></li>
+          <li><img src="../images/vineyardgrapes.svg" alt="grapes"/><a href="http://www.capezzana.it/index.php/it/" target="_blank">Tenuta di Capezzana - Prato, Tuscany</a></li>
+          <li><img src="../images/vineyardgrapes.svg" alt="grapes"/><a href="https://www.antinori.it/en/" target="_blank">Marchesi Antinori - Florence, Tuscany</a></li>
+          <li><img src="../images/vineyardgrapes.svg" alt="grapes"/><a href="http://www.lemacchiole.it/en/home.html" target="_blank">Le Macchiole - Livorno, Tuscany </a></li>
+        </ul>
+      </section>
+      <div>
+        <h2>Images of Tuscany:</h2>
+          <!--This code was code was taken from Pintrest https://developers.pinterest.com/tools/widget-builder/?-->
+          <!--Accessed: April 26, 2021-->
+          <a data-pin-do="embedBoard" data-pin-board-width="500" data-pin-scale-height="400" data-pin-scale-width="115" href="https://www.pinterest.ca/WinesofItaly/sicily/"></a>
+     </div>
+    </div>
+  </main>
+</div>
+
+<footer>
+  <section class="resources">
+    <h4>References:</h4>
+    <a href="https://www.wine-searcher.com/regions-tuscany">Wine-Searcher</a><br/>
+    <a href="https://www.youtube.com/watch?v=gXkqy0b4M5g&t=1550s">Dev Ed</a><br/>
+    <a href="https://www.petercollingridge.co.uk/tutorials/svg/interactive/tooltip/">Peter Coolingridge</a>
+  </section>
+
+  <h6> &#169; 2021 David Zamperin</h6>
+</footer>
+
+<script async defer src="//assets.pinterest.com/js/pinit.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous"></script>
+<script src="../javaScript/searchjQuery.js"></script>
+<script src="../javaScript/navjQuery.js"></script>
+<script async defer src="//assets.pinterest.com/js/pinit.js"></script>
+<script src="../javaScript/highlightRegion.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+  <title>Wines of Italy</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="style_sheet/stylesheet.css">
+  <link rel="stylesheet" href="style_sheet/resources.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+
+<body>
+
+<div class="content-wrap">
+  <header>
+    <a href="index.html"><img src="images/logo.svg" alt="Wine's of Italy Logo"/></a>
+  </header>
+
+  <div class="top-elements">
+
+    <!-- Search bar has been adapted from W3 Schools CSS search bar examples https://www.w3schools.com/howto/howto_css_searchbar.asp*/ -->
+    <!--Accessed: November 1, 2020-->
+    <form action="#" target="_self" method="get" class="search" id="searchform">
+      <input type="search" name="search" placeholder="Search..." class="search__input" id="searchInput"/>
+      <button type="submit" class="search__button"><i class="material-icons md-light">search</i></button>
+    </form>
+    <!-- End of W3C Schools search bar adaptation -->
+
+    <nav aria-label="main-navigation">
+      <ul class="nav-links">
+        <li><a href="regions.html">Regions</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="resources.html"class="active">Resources</a></li>
+      </ul>
+      <!-- This nav bar hamburger has been adapted from Dev Ed's YouTube Responsive Navigation Tutorial https://www.youtube.com/watch?v=gXkqy0b4M5g&t=1550s - code play file: https://www.codeply.com/p/hVa3gv9Umw-->
+      <!-- Accessed: February 1, 2021-->
+      <a aria-hidden="true" href="#"class="burger">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+      </a>
+      <!-- End of responsive hamburger-->
+    </nav>
+  </div>
+
+  <div id='searchResults'></div>
+
+  <div class="breadcrumbs">
+    <h5>Resources</h5>
+  </div>
+
+  <main class="container-resources">
+    <figure class="cr-child1">
+      <img src="images/wine-bottle-resources.svg" alt="wine bottle" class="winebottle"/>
+    </figure>
+
+    <section class="cr-child2">
+      <h2>Resources:</h2>
+      <ul class="resources">
+        <li><a href="https://www.amazon.ca/Wine-Folly-Magnum-Master-Guide/dp/0525533893" target="_blank"><strong>Wine Folly: Magnum Edition: The Master Hardcover</strong><br/>Madeline Puckette and Justin Hammack</a></li>
+        <li><a href="https://www.amazon.ca/Wine-Bible-Karen-MacNeil/dp/0761180834" target="_blank"><strong>The Wine Bible</strong><br/>Karen MacNeil</a></li>
+        <li><a href="https://www.amazon.ca/Wine-Simple-Approachable-World-Class-Sommelier/dp/1984824252" target="_blank"><strong>Wine Simple: A Totally Approchable Guide from a World Class Sommilier</strong><br/>Adam Soham</a></li>
+        <li><a href="https://www.amazon.ca/Oxford-Companion-Wine-Jancis-Robinson/dp/0198705387" target="_blank"><strong>The Oxford Companion to Wine</strong><br/>Janicis Robinson</a></li>
+        <li><a href="https://www.amazon.ca/How-Drink-Wine-Easiest-Learn/dp/1984824686" target="_blank"><strong>How to Drink Wine: The Easiest Way to Learn What You Like</strong><br/>Grant Reynolds and Chris Stang</a></li>
+        <li><a href="https://www.amazon.ca/Italys-Native-Wine-Grape-Terroirs-ebook/dp/B07SW2H17S" target="_blank"><strong>Italy's Native Wine Grape Terriors</strong><br/>Ian D'Agata</a></li>
+        <li><a href="https://www.amazon.ca/What-Drink-You-Eat-Definitive/dp/0821257188/" target="_blank"><strong>What to Drink with What You Eat</strong><br/>Andrew Dornenburg and Karen Page</a></li>
+      </ul>
+    </div>
+    </section>
+
+    <section class="cr-child2">
+      <h2 class="news"> Connexun News Articles:</h2>
+        <div id="events"></div>
+    </section>
+
+  </main>
+</div>
+
+<footer>
+  <section class="resources">
+  <h4>References:</h4>
+  <a href="https://www.youtube.com/watch?v=gXkqy0b4M5g&t=1550s" target="_blank">Dev Ed</a>
+  </section>
+  <h6> &#169; 2021 David Zamperin</h6>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous"></script>
+<script src="javaScript/searchjQuery.js"></script>
+<script src="javaScript/navjQuery.js"></script>
+<script src="javaScript/events.js"></script>
+</body>
+
+</html>

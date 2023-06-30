@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+  <title>Wines of Italy</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="style_sheet/stylesheet.css">
+  <link rel="stylesheet" href="style_sheet/blog-post.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+
+<body>
+  <div id="fb-root"></div>
+  <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v10.0" nonce="ScmvnoG3"></script>
+
+<div class="content-wrap">
+  <header class="logo">
+    <a href="index.html"><img src="images/logo.svg" alt="Wine's of Italy Logo"/></a>
+  </header>
+
+  <div class="top-elements">
+    <!-- Search bar has been adapted from W3 Schools CSS search bar examples https://www.w3schools.com/howto/howto_css_searchbar.asp*/ -->
+    <!--Accessed: November 1, 2020-->
+    <form action="#" target="_self" method="get" class="search" id="searchform">
+      <input type="search" name="search" placeholder="Search..." class="search__input" id="searchInput"/>
+      <button type="submit" class="search__button"><i class="material-icons md-light">search</i></button>
+    </form>
+    <!-- End of W3C Schools search bar adaptation -->
+
+    <nav aria-label="main-navigation">
+      <ul class="nav-links">
+        <li><a href="regions.html">Regions</a></li>
+        <li><a href="blog.html" class="active">Blog</a></li>
+        <li><a href="resources.html">Resources</a></li>
+      </ul>
+      <a aria-hidden="true" href="#"class="burger">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+      </a>
+    </nav>
+  </div>
+
+  <div id='searchResults'></div>
+
+  <div class="breadcrumbs">
+    <h5><a href="blog.html" class="bactive">Blog</a> - Pairing Wine with Pasta</h5>
+  </div>
+
+  <main class="blog-main">
+    <div class="intro">
+      <h2 class="title">Pairing Wine with Pasta </h2>
+      <h5 class="author">Published January 1, 2021 by David Zamperin</h5>
+      <div class="social-share">
+        <!-- Copied from Facebook Developer https://developers.facebook.com/ -->
+        <!-- Accessed April 22, 2021-->
+        <div class="fb-share-button" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button_count" data-size="small" role="button" aria-pressed="false" tabindex="0"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a></div>
+        <!-- Copied from Twitter Developer https://developer.twitter.com/en-->
+        <!-- Accessed April 22, 2021-->
+        <div role="button" aria-pressed="false" tabindex="0"><a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></div>
+        <!-- Copied from Linkedin Developer https://www.linkedin.com/developers/ -->
+        <!-- Accessed April 22, 2021-->
+        <div class="linkedin"role="button" aria-pressed="false" tabindex="0"><script src="https://platform.linkedin.com/in.js" type="text/javascript">lang: en_US</script><script type="IN/Share" data-url="https://www.linkedin.com"></script></div>
+    </div>
+    </div>
+
+    <div class="blog-container">
+      <img src="images/pastaandwine.jpg" alt="pasta" class="img-child"/>
+      <p class="p-child">Pasta is a staple in Italian cusine that makes for an incredibly versitile and delicious meal! To perfect the dish, it is important to choose the right wine pairing that will inhance the flavors and complement the meal, specifically the sauce. Use the guide below to see the best red and white wines that pair well with your favourite sauce! Buon appetito!</p>
+    </div>
+
+    <div class="responsive-table">
+      <table class="pasta">
+        <tr>
+          <th>Pasta Sauce</th>
+          <th>White Wines</th>
+          <th>Red Wines</th>
+        </tr>
+        <tr>
+          <td>Tomato Sauce</td>
+          <td>Pinot Grigio, Verdicchio</td>
+          <td>Chianti, Montepulciano d'Abruzzo, Nebbiolo</td>
+        </tr>
+        <tr>
+          <td> Cream Sauce</td>
+          <td>Prosecco, Bianco di Custoza, Lugana, Chardonnay</td>
+          <td>light Merlot, Pinot Noit</td>
+        </tr>
+        <tr>
+          <td>Seafood Sauce</td>
+          <td>Vernaccia di San Gimignano, Pinot Grigio</td>
+          <td>Chiaretto</td>
+        </tr>
+        <tr>
+          <td>Pesto Sauce</td>
+          <td>Soave, Gruner Veltliner, Gavi</td>
+          <td>Sangiovese, Pinot Noir, Merlot</td>
+        </tr>
+        <tr>
+          <td>Spicy Sauce</td>
+          <td>Asti</td>
+          <td>Valpolicella Ripasso, Lambrusco, Primitivo</td>
+        </tr>
+      </table>
+    </div>
+
+  </main>
+</div>
+
+<footer>
+  <section class="resources">
+  <h4>References:</h4>
+  <a href="https://www.youtube.com/watch?v=gXkqy0b4M5g&t=1550s" target="_blank">Dev Ed</a>
+  </section>
+  <h6> &#169; 2021 David Zamperin</h6>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous"></script>
+<script src="javaScript/searchjQuery.js"></script>
+<script src="javaScript/navjQuery.js"></script>
+
+</body>
+
+</html>
