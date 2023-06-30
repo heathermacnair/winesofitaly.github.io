@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <title>Wines of Italy</title>
+    <link href="https://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/4.3.1/darkly/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style_sheet/index.css">
+    <link rel="stylesheet" href=style_sheet/stylesheet.css>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+
+<body>
+  <div class="content-wrap">
+    <header>
+      <a href="index.html"><img src="images/logo.svg" alt="Wine's of Italy Logo"/></a>
+    </header>
+
+    <div class="top-elements">
+
+    <!-- Search bar has been adapted from W3 Schools CSS search bar examples https://www.w3schools.com/howto/howto_css_searchbar.asp*/ -->
+    <!--Accessed: November 1, 2020-->
+    <form action="#" target="_self" method="get" class="search" id="searchform">
+      <input type="search" name="search" placeholder="Search..." id="searchInput"/>
+      <button type="submit" class="search__button"><i class="material-icons md-light">search</i></button>
+    </form>
+    <!-- End of W3C Schools search bar adaptation -->
+
+    <nav aria-label="main-navigation">
+      <ul class="nav-links">
+        <li><a href="regions.html">Regions</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="resources.html">Resources</a></li>
+      </ul>
+      <!-- This nav bar hamburger has been adapted from Dev Ed's YouTube Responsive Navigation Tutorial https://www.youtube.com/watch?v=gXkqy0b4M5g&t=1550s - code play file: https://www.codeply.com/p/hVa3gv9Umw-->
+      <!-- Accessed: February 1, 2021-->
+      <a aria-hidden="true" href="#"class="burger">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+      </a>
+      <!-- End of responsive hamburger-->
+    </nav>
+
+    </div>
+
+    <div id='searchResults'></div>
+
+    <main>
+      <article>
+        <h2>If you want to learn everything there is to know about Italian wines, you’re in the right place!</h2>
+        <p> Wines of Italy provides quality and accessible education about Italian regional wines along with expert sommelier pairing tips!</p>
+        <a href="regions.html">Learn More</a>
+      </article>
+
+<!--This code has been copied from jqueryscript.net Responsive Bootstrap Carousel with Multiple Items Per Slide https://www.jqueryscript.net/slider/responsive-bootstrap-carousel-multiple-items.html-->
+<!-- Accessed: April 25, 2021-->
+<div class="jquery-script-clear"></div>
+
+    <div class="container text-center">
+        <h2>Popular Wines:</h2>
+        <div class="row mx-auto my-auto">
+            <div id="myCarousel" class="carousel slide w-100" data-ride="carousel">
+                <div class="carousel-inner w-100" role="listbox">
+                    <div class="carousel-item active">
+                        <div class="col-lg-4 col-md-6">
+                          <a href="italian_regions/italian_regional_wines/veneto_amarone.html"><img class="img-fluid" src="images/carousel_images/amarone_card.jpg"></a>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="col-lg-4 col-md-6">
+                            <img class="img-fluid" src="images/carousel_images/barolo_card.jpg">
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="col-lg-4 col-md-6">
+                            <img class="img-fluid" src="images/carousel_images/brunello_card.jpg">
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="col-lg-4 col-md-6">
+                            <img class="img-fluid" src="images/carousel_images/chardonnay_card.jpg">
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="col-lg-4 col-md-6">
+                            <img class="img-fluid" src="images/carousel_images/chianti_card.jpg">
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="col-lg-4 col-md-6">
+                            <a href="italian_regions/italian_regional_wines/veneto_prosecco.html"><img class="img-fluid" src="images/carousel_images/prosecco_card.jpg"></a>
+                        </div>
+                    </div>
+                </div>
+                <a class="carousel-control-prev bg-dark w-auto" href="#myCarousel" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next bg-dark w-auto" href="#myCarousel" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </div>
+    </div>
+    <!--End of copied code from jQuery script.net -->
+
+    <div class="twitter">
+      <h2>Check out the latest Tweets from the Italian wine community!</h2>
+      <!-- Twitter integrations-->
+      <a class="twitter-timeline" data-lang="en" data-width="400" data-height="500" href="https://twitter.com/itawinepodcast?ref_src=twsrc%5Etfw">Tweets by itawinepodcast</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+      <a class="twitter-timeline" data-width="400" data-height="500" href="https://twitter.com/ItalianWineBook?ref_src=twsrc%5Etfw">Tweets by ItalianWineBook</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+      <a class="twitter-timeline" data-width="400" data-height="500" href="https://twitter.com/laura_donadoni?ref_src=twsrc%5Etfw">Tweets by laura_donadoni</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+      <a class="twitter-timeline" data-width="400" data-height="500" href="https://twitter.com/ItalianBuyers?ref_src=twsrc%5Etfw">Tweets by ItalianBuyers</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    </div>
+</main>
+</div>
+
+<footer>
+  <section class="resources">
+  <h4>References:</h4>
+  <a href="https://www.youtube.com/watch?v=gXkqy0b4M5g&t=1550s" target="_blank">Dev Ed</a>
+  </section>
+  <h6> &#169; 2021 David Zamperin</h6>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous"></script>
+<script src="javaScript/searchjQuery.js"></script>
+<script src="javaScript/navjQuery.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<script src="javaScript/carousel.js"></script>
+
+</body>
+
+</html>
